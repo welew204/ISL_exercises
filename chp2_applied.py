@@ -24,7 +24,10 @@ college["Elite"] = pd.cut(college["Top10perc"]/100,
 #college.boxplot(column='Outstate', by='Elite', ax=axes)
 college.plot.hist(column="Outstate", by="Private", bins=10, ax=axes[0])
 
-college.plot.hist(column='Top10perc', by='Room.Board', bins=10, ax=axes[1])
+# print(college["Outstate"].values)
+#college.plot.hist(column=['Grad.Rate'], bins=10, ax=axes[1][0])
+college["Grad.Rate"].plot.hist(bins=20, ax=axes[1][0])
+college["Expend"].plot.hist(bins=20, ax=axes[1][1])
 
 
 exit()
